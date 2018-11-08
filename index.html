@@ -12,26 +12,6 @@
 <body>
   <center>
 
- <form>
-Iteration number:<br>
-<input type="number" name="iteration_no"/>
-<input type="submit" id="save_run" value="Run"/>
-</form>
-  <script>
-    document.forms[0].onsubmit = function(event) {
-      event.preventDefault();         
-      var val = this.children["iteration_no"].value;
-      var script = document.createElement("script");
-      script.type = "text/javascript";
-      script.onload = script.onerror = function() {
-        console.log(this.src.split("?")[1]);
-        this.parentNode.removeChild(this)
-      };
-      script.src = "?iteration_no=" + encodeURIComponent(val);
-        document.head.appendChild(script);
-    }
-  </script>
-    
   <div class="header">
     <h1>The Circle Shaped Word Cloud</h1>
     <a href="https://www.google.com/search?q=sting+desert+rose+lyrics&rlz=1C5CHFA_enUS720US720&oq=st&aqs=chrome.0.69i59j69i61j69i60l2j69i59l2.1338j0j7&sourceid=chrome&ie=UTF-8">Lyrics</a>
